@@ -8,13 +8,9 @@
             $this->load->database();
         }
 
-        public function registro(){
+        public function registro($placa, $tipo){
             //insercion directa a mysql 
-            $data=array(
-                'placa'=> $this->input->post("placa"),
-                'tipo'=> $this->input->post("tipo")
-            );
-            return $this->db->insert('autos',$data);
+            return $this->db->insert('autos',['placa'=> $placa,'tipo'=> $tipo]);
         }
 
         public function getAll(){
@@ -28,8 +24,8 @@
 
         public function update($id) {
             $data=array(
-                'nombre'=> $this->input->post("placa"),
-                'apellido'=> $this->input->post("tipo")
+                'placa'=> $this->input->post("placa"),
+                'tipo'=> $this->input->post("tipo")
             );
             if($id==0){
                 return $this->db->insert('autos',$data);

@@ -27,4 +27,5 @@ $route['auto/form/(:any)'] = 'auto/form/$1';
 $route['autocreate']['post']="auto/create";
 $route['autoupdate/(:any)']['post']="auto/update/$1";
 $route['autodelete/(:any)']['delete']="auto/delete/$1";
+$route['auto/delete/(:any)']['delete']="auto/delete/$1";
 // $route['productsCreate']['post']="products/store";

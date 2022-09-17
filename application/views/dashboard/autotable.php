@@ -26,8 +26,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             		<td><?php echo $row->id; ?></td> 
 					<td><?php echo $row->placa ?></td>
 					<td><?php echo $row->tipo ?></td>
-					<td><a class="btn btn-warning" href="<?php echo base_url('auto/edit/'.$row->id)?>" role="button">Editar</a></td>
-					<td><a class="btn btn-danger" href="<?php echo base_url('autodelete/'.$row->id)?>" role="button">Eliminar</a></td>
+					<td><a class="btn btn-warning" href="<?php echo base_url('auto/form/'.$row->id)?>" role="button">Editar</a></td>
+					<!-- <td><a class="btn btn-danger" href="<?php echo base_url('autodelete/'.$row->id)?>" role="button">Eliminar</a></td> -->
+                    <td><a class="btn btn-danger" href="<?php echo base_url('auto/delete/'.$row->id)?>" role="button">Eliminar</a></td>
 
             	</tr> 
 			<?php 

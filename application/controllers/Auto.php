@@ -22,37 +22,35 @@ class Auto extends CI_Controller {
 
 
 		//llamamos a la funcion datosModelo y le enviamos los datos de la vista en una variable resultado
-		$resultado = $this->datosModel->update($id);
+		$resultado = $this->autosModel->update($id);
         $this->index();
 	}
 
     public function create(){
+		$placa=$this->input->post("placa");
+		$tipo=$this->input->post("tipo");
 		//validamos y hacemos un catch
-        $this->autosModel->registro();
-        $this->index();
+        $resultado = $this->autosModel->registro($placa, $tipo);
+		$this->index();
 	}
 
 	public function form($id){
 
         if ($id == "new") {
-            $this->load->view('dashboard/autoform');
-        }
-        // $data['table'] = get_form();
+			$user['ress']="";
+            $this->load->view('dashboard/autoform', $user);
+        }else{
+			$user['ress'] = $this->autosModel->getautoById($id);
+			$this->load->view('dashboard/autoform', $user);
+		}
 		//module butstrap
 		$this->load->view('headers/librerias');
-        // //view acount/update
-		// $this->load->view('acount/update');
-		// $user['ress'] = $this->datosModel->getUserById($id);
-		// if ($user) {
-			
-		// 	$this->load->view('dashboard/autoform', $user);
-		// }else{
-		// 	$this->index();
-		// }
+
 	}
 
 	public function delete($id){
-		$this->datosModel->deletById($id);
+		$this->autosModel->deletById($id);
+		
 		$this->index();
 	}
 	
