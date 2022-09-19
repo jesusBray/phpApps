@@ -22,7 +22,7 @@ class Acount extends CI_Controller {
 
 
 		//llamamos a la funcion datosModelo y le enviamos los datos de la vista en una variable resultado
-		$resultado = $this->datosModel->update($id);
+		$resultado= $this->datosModel->update($id);
 
 		//validamos y hacemos un catch
 		if ($resultado ) {
@@ -51,6 +51,22 @@ class Acount extends CI_Controller {
 		$this->datosModel->deletById($id);
 		$this->index();
 	}
-	
-	
+
+	public function registrar(){
+		$nombre=$this->input->post("nombre");
+		$apellido=$this->input->post("apellido");
+		$ci=$this->input->post("ci");
+		$telefono=$this->input->post("telefono");
+		$email=$this->input->post("email");
+		$password=$this->input->post("password");
+
+		//llamamos a la funcion datosModelo y le enviamos los datos de la vista en una variable resultado
+		$this->datosModel->registro($nombre, $apellido, $ci, $telefono, $email, $password);
+		$this->index();
+	}
+
+	public function getform(){
+		$this->load->view('headers/librerias');
+		$this->load->view('acount/acountform');
+	}
 }

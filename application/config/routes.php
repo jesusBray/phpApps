@@ -6,20 +6,21 @@ $route['default_controller'] = 'Inicio';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-// login routes
-$route['login'] = 'Login';
-$route['logintest']['post']="Login/validate";
-// end login routes
-
 //acount routes
 //      path                    controller -> method
 $route['acount'] = 'Acount';
+$route['acount/form'] = 'acount/getform';
+$route['acount/registrar']['post']="acount/registrar";
 $route['acount/edit/(:any)'] = 'acount/edit/$1';
 $route['acountupdate/(:any)']['post']="acount/update/$1";
 $route['acountdelete/(:any)']['delete']="acount/delete/$1";
 // end acount routes
 
 $route['about'] = 'About';
+
+//login
+$route['login'] = 'Login';
+$route['loginvalidate'] = 'login/validate';
 
 //autos routes
 $route['auto'] = 'Auto';

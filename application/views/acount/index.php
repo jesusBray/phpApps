@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			?>
         </tbody>
     </table>
-
+	<td><a class="btn btn-primary" href="<?php echo base_url('acount/form')?>" role="button">Nuevo Usuario</a></td>
 
 	<!-- <input type="submit" value="Adicionar"/> -->
 
