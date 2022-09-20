@@ -22,9 +22,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="<?php base_url();?>/CodeIgniter/about">About</a></li>
+            <li><a href="<?php base_url();?>about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-			      <li><a href="<?php base_url();?>/CodeIgniter/login">Login</a></li>
+			      <li><a href="<?php base_url();?>login">Login</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

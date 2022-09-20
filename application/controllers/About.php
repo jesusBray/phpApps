@@ -12,10 +12,9 @@ class About extends CI_Controller {
 
 	public function index()
 	{
-		$info['ress'] = "hola desde php";
 		//module butstrap
-		// $this->load->view('headers/librerias');
-		$this->load->view('about',$info);
+		$this->load->view('headers/librerias');
+		$this->load->view('about');
 	}
 	
 }
