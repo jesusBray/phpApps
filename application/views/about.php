@@ -269,29 +269,80 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Panel Principal</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
-
                     <!-- Area Chart -->
                     <div class="row">
                         <div class="col-xl-12 col-lg-12">
                             <div class="card shadow mb-4">
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h4 class="m-0 font-weight-bold text-primary">Datos Generales</h6>
+                                    <h2 class="m-0 font-weight-bold text-primary">Datos Generales</h2>
                                 </div>
                                 <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                        <p>asdsad</p>
+                                
+                                <form class="card-body h3">
+                                    <label for="basic-url" >Nombres</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
                                     </div>
-                                </div>
+                                    <label for="basic-url">Apellidos</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                    <label for="basic-url">Asunto</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                    <label for="basic-url">vehiculo</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                    <label for="basic-url">Placa del vehiculo</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                    <label for="basic-url">Modelo del vehiculo</label>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                    
+                                    <label for="basic-url">Bloque de estacionamiento</label>
+                                    <div class="input-group mb-3">
+                                    <select class="custom-select" id="inputGroupSelect04">
+                                        <option selected>Escoje un lote...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                    </div>
+                                    <label for="basic-url">Numero de parqueo</label>
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+                                    <label for="basic-url">Fecha y hora</label>
+                                    <div class="input-group mb-3">
+                                        <input type="datetime-local" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                    </div>
+<!-- 
+                                    <label for="basic-url">Hora</label>
+                                    <div class="input-group mb-3">
+                                        <input type="datetime-local" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                    </div> -->
+                                    <!-- <div class="container">
+                                        <div class="row">
+                                            <div class='col-sm-6'>
+                                                <input type='text' class="form-control" id='datetimepicker4' />
+                                            </div>
+                                            <script type="text/javascript">
+                                                $(function () {
+                                                    $('#datetimepicker4').datetimepicker();
+                                                });
+                                            </script>
+                                        </div>
+                                    </div> -->
+                                    <br/>
+                                    <button class="btn btn-lg btn-primary" type="submit" value="validate">Guardar</button>    
+                                </form>
+
                             </div>
                         </div>
                     </div>
