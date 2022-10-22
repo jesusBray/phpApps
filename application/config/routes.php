@@ -18,6 +18,9 @@ $route['acountdelete/(:any)']['delete']="acount/delete/$1";
 
 $route['about'] = 'About';
 
+//dashboard
+$route['dashboard'] = 'Dashboard';
+
 //login
 $route['login'] = 'Login';
 $route['loginvalidate'] = 'login/validate';

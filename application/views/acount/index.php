@@ -4,8 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to acount</title>
+	<title>Yesvil</title>
+        <link rel="stylesheet" type="text/css" href="<?=base_url('css/about/style.css'); ?>">
 </head>
+
 <body>
 	<h3>Users</h3>
 	<table class="table table-bordered"> 

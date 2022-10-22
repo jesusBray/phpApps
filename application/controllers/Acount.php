@@ -69,4 +69,8 @@ class Acount extends CI_Controller {
 		$this->load->view('headers/librerias');
 		$this->load->view('acount/acountform');
 	}
+
+	public function regitroVehiculo(){
+		$this->load->view('dashboard/registoVehiculo');
+	}
 }
